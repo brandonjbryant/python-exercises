@@ -87,7 +87,8 @@ negative_numbers = [num for num in numbers if num < 0]
 print(negative_numbers)
 
 # Exercise 14 - use a list comprehension w/ a conditional in order to produce a list of numbers with 2 or more numerals
-
+two_or_more_numerals = [num for num in numbers if len(str(abs(num))) >= 2]
+print(two_or_more_numerals)
 # Exercise 15 - Make a variable named numbers_squared that contains the numbers list with each element squared. Output is [4, 9, 16, etc...]
 
 # Exercise 16 - Make a variable named odd_negative_numbers that contains only the numbers that are both odd and negative.
