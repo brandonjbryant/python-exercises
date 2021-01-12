@@ -30,3 +30,24 @@ is_premium_member = True
 offer_can_be_applied = offer_has_not_expired and (buys_more_than_2 or is_premium_member)
 print(offer_can_be_applied)
 
+
+
+#the password must be at least 5 characters
+#the username must be no more than 20 characters
+#the password must not be the same as the username
+#bonus neither the username or password can start or end with whitespace
+username = 'codeup'
+password = 'notastrongpassword'
+
+at_least_five = len(password) >= 5
+no_more_than_20 = len(username) <= 20
+password_different_from_username = password != username 
+username_whitespace_strip = username == username.strip()
+password_whitespace_strip = password == password.strip()
+username_acceptable = no_more_than_20 and username_whitespace_strip 
+password_acceptable = at_least_five and password_whitespace_strip
+secure_enough = username_acceptable and  password_acceptable
+print(secure_enough)
+
+
+
