@@ -95,7 +95,9 @@ numbers = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 17, 19, 23, 256, -8, -4, -2, 5, -
 numbers_squared = [num ** 2 for num in numbers]
 print(numbers_squared)
 # Exercise 16 - Make a variable named odd_negative_numbers that contains only the numbers that are both odd and negative.
-
+numbers = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 17, 19, 23, 256, -8, -4, -2, 5, -9]
+odd_negative_numbers = [num for num in numbers if num % 2 == 1 and num < 0]
+print(odd_negative_numbers)
 # Exercise 17 - Make a variable named numbers_plus_5. In it, return a list containing each number plus five. 
-
+numbers = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 17, 19, 23, 256, -8, -4, -2, 5, -9]
 # BONUS Make a variable named "primes" that is a list containing the prime numbers in the numbers list. *Hint* you may want to make or find a helper function that determines if a given number is prime or not.
