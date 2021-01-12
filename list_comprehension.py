@@ -46,13 +46,13 @@ fruits_with_only_two_vowels = [fruit for fruit in fruits if (
     fruit.count("e") + 
     fruit.count("i") + 
     fruit.count("o") + 
-     fruit.count("u"))  is 2]
+     fruit.count("u"))  == 2]
 print(fruits_with_only_two_vowels)
 
 # Exercise 5 - make a list that contains each fruit with more than 5 characters
 fruits = ['mango', 'kiwi', 'strawberry', 'guava', 'pineapple', 'mandarin orange']
 more_than_five_letter_fruits = [fruit for fruit in fruits if len(fruit) == 5]
-print(five_word_fruits)
+print(more_than_five_letter_fruits)
 # Exercise 6 - make a list that contains each fruit with exactly 5 characters
 fruits = ['mango', 'kiwi', 'strawberry', 'guava', 'pineapple', 'mandarin orange']
 five_letter_fruits = [fruit for fruit in fruits if len(fruit) == 5]
@@ -67,7 +67,9 @@ fruits = ['mango', 'kiwi', 'strawberry', 'guava', 'pineapple', 'mandarin orange'
 number_of_characters = [len(fruit) for fruit in fruits]
 print(number_of_characters)
 # Exercise 9 - Make a variable named fruits_with_letter_a that contains a list of only the fruits that contain the letter "a"
-
+fruits = ['mango', 'kiwi', 'strawberry', 'guava', 'pineapple', 'mandarin orange']
+fruits_with_letter_a = [fruit for fruit in fruits if  "a" in fruit]
+print(fruits_with_letter_a)
 # Exercise 10 - Make a variable named even_numbers that holds only the even numbers 
 
 # Exercise 11 - Make a variable named odd_numbers that holds only the odd numbers
