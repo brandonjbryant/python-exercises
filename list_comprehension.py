@@ -71,9 +71,13 @@ fruits = ['mango', 'kiwi', 'strawberry', 'guava', 'pineapple', 'mandarin orange'
 fruits_with_letter_a = [fruit for fruit in fruits if  "a" in fruit]
 print(fruits_with_letter_a)
 # Exercise 10 - Make a variable named even_numbers that holds only the even numbers 
-
+numbers = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 17, 19, 23, 256, -8, -4, -2, 5, -9]
+even_numbers = [num for num in numbers if num % 2 == 0]
+print(even_numbers)
 # Exercise 11 - Make a variable named odd_numbers that holds only the odd numbers
-
+numbers = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 17, 19, 23, 256, -8, -4, -2, 5, -9]
+odd_numbers = [num for num in numbers if num % 2 == 1]
+print(odd_numbers)
 # Exercise 12 - Make a variable named positive_numbers that holds only the positive numbers
 
 # Exercise 13 - Make a variable named negative_numbers that holds only the negative numbers
