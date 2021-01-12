@@ -21,7 +21,6 @@ for fruit in fruits:
 fruits = ['mango', 'kiwi', 'strawberry', 'guava', 'pineapple', 'mandarin orange']
 
 
-
 uppercased_fruits = [fruit.upper() for fruit in fruits]
 print(uppercased_fruits)
 # Exercise 2 - create a variable named capitalized_fruits and use list comprehension syntax to produce output like ['Mango', 'Kiwi', 'Strawberry', etc...]
@@ -83,6 +82,9 @@ numbers = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 17, 19, 23, 256, -8, -4, -2, 5, -
 positive_numbers = [num for num in numbers if num > 0]
 print(positive_numbers)
 # Exercise 13 - Make a variable named negative_numbers that holds only the negative numbers
+numbers = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 17, 19, 23, 256, -8, -4, -2, 5, -9]
+negative_numbers = [num for num in numbers if num < 0]
+print(negative_numbers)
 
 # Exercise 14 - use a list comprehension w/ a conditional in order to produce a list of numbers with 2 or more numerals
 
