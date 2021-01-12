@@ -79,7 +79,9 @@ numbers = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 17, 19, 23, 256, -8, -4, -2, 5, -
 odd_numbers = [num for num in numbers if num % 2 == 1]
 print(odd_numbers)
 # Exercise 12 - Make a variable named positive_numbers that holds only the positive numbers
-
+numbers = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 17, 19, 23, 256, -8, -4, -2, 5, -9]
+positive_numbers = [num for num in numbers if num > 0]
+print(positive_numbers)
 # Exercise 13 - Make a variable named negative_numbers that holds only the negative numbers
 
 # Exercise 14 - use a list comprehension w/ a conditional in order to produce a list of numbers with 2 or more numerals
