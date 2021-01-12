@@ -18,9 +18,17 @@ for fruit in fruits:
     output.append(fruit.upper())
     
 # Exercise 1 - rewrite the above example code using list comprehension syntax. Make a variable named uppercased_fruits to hold the output of the list comprehension. Output should be ['MANGO', 'KIWI', etc...]
+fruits = ['mango', 'kiwi', 'strawberry', 'guava', 'pineapple', 'mandarin orange']
 
+
+
+uppercased_fruits = [fruit.upper() for fruit in fruits]
+print(uppercased_fruits)
 # Exercise 2 - create a variable named capitalized_fruits and use list comprehension syntax to produce output like ['Mango', 'Kiwi', 'Strawberry', etc...]
+fruits = ['mango', 'kiwi', 'strawberry', 'guava', 'pineapple', 'mandarin orange']
 
+capitalized_fruits = [fruit.capitalize() for fruit in fruits]
+print(capitalized_fruits)
 # Exercise 3 - Use a list comprehension to make a variable named fruits_with_more_than_two_vowels. Hint: You'll need a way to check if something is a vowel.
 
 # Exercise 4 - make a variable named fruits_with_only_two_vowels. The result should be ['mango', 'kiwi', 'strawberry']
@@ -30,6 +38,7 @@ for fruit in fruits:
 # Exercise 6 - make a list that contains each fruit with exactly 5 characters
 
 # Exercise 7 - Make a list that contains fruits that have less than 5 characters
+
 
 # Exercise 8 - Make a list containing the number of characters in each fruit. Output would be [5, 4, 10, etc... ]
 
