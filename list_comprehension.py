@@ -100,4 +100,6 @@ odd_negative_numbers = [num for num in numbers if num % 2 == 1 and num < 0]
 print(odd_negative_numbers)
 # Exercise 17 - Make a variable named numbers_plus_5. In it, return a list containing each number plus five. 
 numbers = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 17, 19, 23, 256, -8, -4, -2, 5, -9]
+numbers_plus_5 = [num + 5 for num in numbers]
+print(numbers_plus_5)
 # BONUS Make a variable named "primes" that is a list containing the prime numbers in the numbers list. *Hint* you may want to make or find a helper function that determines if a given number is prime or not.
