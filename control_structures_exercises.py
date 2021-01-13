@@ -12,16 +12,29 @@ today = input("What day of the week is it today? ")
 today = today.lower()
 
 if today == "saturday" or today == "sunday" :
-    print(f"{today.capitalize()} is a weekend kinda day!! ")
+    print(f"{today.capitalize()} is a weekend kinda day!!")
 else:
-    print(f"{today.capitalize()} is just a weekday, sorry pal. ")
+    print(f"{today.capitalize()} is just a weekday, sorry pal.")
 
 #create variables and make up values for
             #the number of hours worked in one week 
-            hours_worked = 
+            
             #the hourly rate
-            hourly_pay = 
+   
             #how much the week's paycheck will be
-            paycheck_amount = 
+            
             #write the python code that calculates the weekly paycheck. You get
             #paid time and a half if you work more than 40 hours
+hours_worked = 80
+hourly_pay = 100
+ 
+if hours_worked <= 40:
+    paycheck_amount = hours_worked * hourly_pay
+else:
+    # full 40 hours + overtime
+    extra_grind_hours = hours_worked - 40
+    light_work = 40 * hourly_pay
+    extra_grind_pay_amount = extra_grind_hours * (hourly_pay* 1.5)
+    paycheck_amount = light_work + extra_grind_pay_amount
+
+print("My paycheck amount is " +str(paycheck_amount) + " dollars this week. Not bad for 80 hours!")
