@@ -11,7 +11,7 @@ else :
 today = input("What day of the week is it today? ")
 today = today.lower()
 
-if today == "saturday" or today == "sunday"
+if today == "saturday" or today == "sunday" :
     print(f"{today.capitalize()} is a weekend kinda day!! ")
 else:
     print(f"{today.capitalize()} is just a weekday, sorry pal. ")
