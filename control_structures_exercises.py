@@ -58,5 +58,56 @@ while i <= 100:
     print(i)
     i += 2
 
+# Print output that counts backwards by 5 from 100 to -10.
+i = 100
+end = -10
+while i >= end:
+    print(i)
+    i -= 5
 
 
+#Write some code that prompts the user for a number, then shows a multiplication table up through 10 for that number.
+#7 times i
+number = int(input("Choose a number "))
+for i in range(1, 11):
+    print(f"{number} x {i} = {number * i}")
+
+
+#Create this output:
+#1
+#22
+#333
+#4444
+#55555
+#666666
+#7777777
+#88888888
+#999999999
+for i in range(1, 10):
+    print(i * str(i))
+
+
+#Prompt the user for an odd number between 1 and 50.
+
+#Use a loop and a break statement to continue prompting the user if they enter invalid input.
+
+while True:
+    user_choice= input("Choose an odd number between 1 and 50")
+    
+    if user_choice.isdigit():
+        user_choice = int(user_choice)
+    
+        choice_maximum_met = user_choice > 1
+        choice_minimum_met = user_choice < 50
+        choice_is_odd = user_choice % 2 != 0
+        
+        if choice_maximum_met and choice_minimum_met and choice_is_odd:
+            break
+        else:
+            print("Your choice must be an odd number greater than 1 and less than 50")
+    else:
+        print("Your choice must be a number ")
+        
+user_choice
+#(Hint: use the isdigit method on strings to determine this). 
+#Use a loop and the continue statement to output all the odd numbers between 1 and 50, except for the number the user entered.
