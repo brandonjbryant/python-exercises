@@ -111,3 +111,28 @@ while True:
 user_choice
 #(Hint: use the isdigit method on strings to determine this). 
 #Use a loop and the continue statement to output all the odd numbers between 1 and 50, except for the number the user entered.
+# Use a loop and the continue statement to output all the odd numbers between 1 and 50, except for the number the user entered.
+print(f"Skip {user_choice}")
+print() # prints an extra new line
+
+for i in range(1, 50, 2):
+    if i == user_choice:
+        print(f"try again: {i}")
+        continue
+    print(f"Odd Number: {i}")
+
+user_choice = input("Choose a number ")
+while (user_choice.isdigit() == False  
+            or int(user_choice) <= 0):   
+    print(f"{user_choice} Choose a positive number")
+    user_choice = input("Choose a positive number")
+
+user_choice = int(user_choice)
+
+for i in range(user_choice + 1):
+    print(i)
+
+
+while user_choice >= 1:
+    print(user_choice)
+    user_choice -= 1
