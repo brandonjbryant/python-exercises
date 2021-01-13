@@ -1,6 +1,6 @@
 #prompt the user for a day of the week
 today = input("What day of the week is it today? ")
-if today == "Monday" or "monday" :
+if today == "Monday" :
         print("Today is Monday my friend! ")
 else :
         print("Today is not Monday my friend! ")
@@ -38,3 +38,15 @@ else:
     paycheck_amount = light_work + extra_grind_pay_amount
 
 print("My paycheck amount is " +str(paycheck_amount) + " dollars this week. Not bad for 80 hours!")
+
+
+
+#Create an integer variable i with a value of 5.
+    
+#Create a while loop that runs so long as i is less than or equal to 15
+i = 5
+while i <= 15:
+    print(i) 
+    i += 1
+#Each loop iteration, output the current value of i, then increment i by one.
+
