@@ -136,3 +136,62 @@ for i in range(user_choice + 1):
 while user_choice >= 1:
     print(user_choice)
     user_choice -= 1
+
+
+#FizzBuzz test is designed to test basic looping and conditional logic skills.
+
+# Write a program that prints the numbers from 1 to 100.
+# For multiples of three print "Fizz" instead of the number
+# For the multiples of five print "Buzz".
+# For numbers which are multiples of both three and five print "FizzBuzz".
+for i in range(1, 101):
+    if i % 5 == 0 and i % 3 == 0: # explicit is better than implicit
+        print("FizzBuzz")
+    elif i % 3 == 0:
+        print("Fizz")
+    elif i % 5 == 0:
+        print("Buzz")
+    else:
+        print(i) 
+
+
+# Display a table of powers.
+
+# Prompt the user to enter an integer.
+# Display a table of squares and cubes from 1 to the value entered.
+# Ask if the user wants to continue.
+# Assume that the user will enter valid data.
+# Only continue if the user agrees to.
+# Example Output
+
+# What number would you like to go up to? 5
+
+# Here is your table!
+
+# number | squared | cubed
+# ------ | ------- | -----
+# 1      | 1       | 1
+# 2      | 4       | 8
+# 3      | 9       | 27
+# 4      | 16      | 64
+# 5      | 25      | 125
+
+
+while True:
+    
+    user_choice = int(input("Choose a number"))
+
+    print("Here is your table!")
+
+    print("number | squared | cubed")
+    print("------ | ------- | -----")
+    for i in range(1, user_choice + 1):
+        print(f"{i}     |   {i**2}   |   {i ** 3}")
+    
+    continue_or_not = input("Press Y or yes to continue... \n")
+
+    # if yoou don't want to continue, we're done here...
+    if continue_or_not not in ["y", "yes", "Y", "Yes"]:
+        break
+    
+print("Thank you!")
