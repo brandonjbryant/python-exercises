@@ -241,11 +241,11 @@ print("Thank you!")
 #Then loop through your books list
 #Print out the titles of all the books in that genre.
 books = [
-    {"title": "This is where I leave you", "author": "Jonathan Tropper", "genre": "Adult Fiction"},
-    {'title': 'Parable of the Sower', 'author': 'Octavia E. Butler', 'genre': 'Science Fiction'},
-    {"title": "Dune", "author": "Frank Herbert", "genre": "Science Fiction"},
-    {'title': 'The Singularity is Near', 'author': 'Ray Kurzweil', 'genre': 'Artificial intelligence/Technology'},
-    {"title": "Star Wars: The Old Republic - Revan", "author": "Sean Williams", "genre": "Science Fiction"},
+    {"title": "Naked Statistics", "author": "Charles Wheelan", "genre": "Science/Mathmatics"},
+    {'title': 'Visual and Statistical Thinking : Displays of Evidence for Making Decisions', 'author': 'Edward R. Tufte', 'genre': 'Statistics'},
+    {"title": "How Charts Lie : Getting Smarter About Visual information", "author": "Alberto Cairo", "genre": "Reference"},
+    {'title': 'The Institute', 'author': 'Stephen King', 'genre': 'Science Fiction'},
+    {"title": "Animal Farm", "author": "George Orwell", "genre": "Fiction"},
 ]
 
 selected_genre = input('Please enter a genre: ')
