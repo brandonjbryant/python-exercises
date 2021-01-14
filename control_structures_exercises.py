@@ -240,5 +240,21 @@ print("Thank you!")
 #Prompt the user to enter a genre, 
 #Then loop through your books list
 #Print out the titles of all the books in that genre.
+books = [
+    {"title": "This is where I leave you", "author": "Jonathan Tropper", "genre": "Adult Fiction"},
+    {'title': 'Parable of the Sower', 'author': 'Octavia E. Butler', 'genre': 'Science Fiction'},
+    {"title": "Dune", "author": "Frank Herbert", "genre": "Science Fiction"},
+    {'title': 'The Singularity is Near', 'author': 'Ray Kurzweil', 'genre': 'Artificial intelligence/Technology'},
+    {"title": "Star Wars: The Old Republic - Revan", "author": "Sean Williams", "genre": "Science Fiction"},
+]
+
+selected_genre = input('Please enter a genre: ')
+selected_books = [book for book in books if book['genre'] == selected_genre]
+
+for book in selected_books:
+    print('---')
+    print('title: ' + book['title'])
+    print('author: ' + book['author'])
+    print('genre: ' + book['genre'])
 
 
