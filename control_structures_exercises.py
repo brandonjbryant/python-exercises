@@ -233,6 +233,12 @@ while True:
 
 print("Thank you!")
 
+#Create a list of dictionaries where each dictionary represents a book that you have read. 
+#Each dictionary in the list should have the keys title, author, and genre.
+#Loop through the list and print out information about each book.
 
+#Prompt the user to enter a genre, 
+#Then loop through your books list
+#Print out the titles of all the books in that genre.
 
 
