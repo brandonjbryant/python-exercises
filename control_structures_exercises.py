@@ -195,3 +195,44 @@ while True:
         break
     
 print("Thank you!")
+
+#Convert given number grades into letter grades.
+
+#Prompt the user for a numerical grade from 0 to 100.
+#Display the corresponding letter grade.
+#Prompt the user to continue.
+#Assume that the user will enter valid integers for the grades.
+#The application should only continue if the user agrees to.
+#Grade Ranges:
+
+#A : 100 - 88
+#B : 87 - 80
+#C : 79 - 67
+#D : 66 - 60
+#F : 59 - 0
+while True:
+    number_grade = input("Please input a number grade")
+    number_grade = int(number_grade)
+
+    if number_grade >= 88:
+        print("A")
+    elif number_grade >= 80:
+        print("B")
+    elif number_grade >= 67:
+        print("C")
+    elif number_grade >= 60:
+        print("D")
+    else:
+        print("F")
+     
+    wants_to_continue = input("Do you want to continue? Press Y or yes to continue... ")
+
+    #Want to continue?
+    if wants_to_continue not in ["y", "yes", "Y", "Yes"]:
+        break
+
+print("Thank you!")
+
+
+
+
