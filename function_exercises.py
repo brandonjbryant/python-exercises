@@ -28,6 +28,14 @@ assert capitalized_consonant('codeup') == 'Codeup'
 
 print("Exercise is correct.")
 # 5. Define a function named calculate_tip. It should accept a tip percentage (a number between 0 and 1) and the bill total, and return the amount to tip.
+def calculate_tip(tip_percentage,bill_total):
+    amount_to_tip = tip_percentage * bill_total
+    return amount_to_tip
+
+assert calculate_tip(.5,13.50)
+assert calculate_tip(.25,20)
+
+print("Exercise is correct")
 
 # 6. Define a function named apply_discount. It should accept a original price, and a discount percentage, and return the price after the discount is applied.
 
