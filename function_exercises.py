@@ -79,7 +79,21 @@ assert get_letter_grade(70) == 'C'
 assert get_letter_grade(60) == 'F'
 
 # 9. Define a function named remove_vowels that accepts a string and returns a string with all the vowels removed.
+def remove_vowels(string):
+    string_without_vowels = ''
+    
+    for c in string:
+        if not is_vowel(c):
+            string_without_vowels += c
+            
+    return string_without_vowels 
 
+assert remove_vowels('a') == ''
+assert remove_vowels('codeup') == 'cdp'
+assert remove_vowels('eee') == ''
+assert remove_vowels('bbb') == 'bbb'
+
+print("Exercise is correct")
 # 10. Define a function named normalize_name. It should accept a string and return a valid python identifier, that is:
  #A. anything that is not a valid python identifier should be removed
  #B. leading and trailing whitespace should be removed
@@ -89,7 +103,17 @@ assert get_letter_grade(60) == 'F'
 #Name will become name
 #First Name will become first_name
 #% Completed will become completed 
+def remove_special_characters(string):
+    return ''.join([c for c in string if c.isalnum() or c == ' '])
 
+def normalize_name(string):
+    special_characters_removed = remove_special_characters(string)
+    return special_characters_removed.lower().strip().replace(' ', '_')
+
+assert normalize_name('Name') == 'name'
+assert normalize_name('First Name') == 'first_name'
+assert normalize_name('% Completed') == 'completed'
+print("Exercise is correct")
 #Write a function named cumulative_sum that accepts a list of numbers and returns a list that is the cumulative sum of the numbers in the list.
  #cumulative_sum([1, 1, 1]) returns [1, 2, 3]
     #cumulative_sum([1, 2, 3, 4]) returns [1, 3, 6, 10]
