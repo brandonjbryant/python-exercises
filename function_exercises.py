@@ -61,6 +61,22 @@ assert handle_commas('123') == 123
 print("Exercise is correct")
 # 8. Define a function named get_letter_grade. It should accept a number and return the letter grade associated with that number (A-F).
 
+def get_letter_grade(numeric_grade):
+    if numeric_grade >= 90:
+        return 'A'
+    elif numeric_grade >= 80:
+        return 'B'
+    elif numeric_grade >= 70:
+        return 'C'
+    else:
+        return 'F'
+
+assert get_letter_grade(90) == 'A'
+assert get_letter_grade(95) == 'A'
+assert get_letter_grade(80) == 'B'
+assert get_letter_grade(85) == 'B'
+assert get_letter_grade(70) == 'C'
+assert get_letter_grade(60) == 'F'
 
 # 9. Define a function named remove_vowels that accepts a string and returns a string with all the vowels removed.
 
