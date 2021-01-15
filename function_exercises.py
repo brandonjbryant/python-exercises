@@ -16,7 +16,17 @@ def is_consonant(letter):
 is_consonant('b')
 
 # 4. Define a function that accepts a string that is a word. The function should capitalize the first letter of the word if the word starts with a consonant.
+def capitalized_consonant(word):
+    first_letter = word[0]
+    if is_consonant(first_letter):
+        return word.capitalize()
+    else:
+        return word
 
+assert capitalized_consonant('mac') == 'Mac'
+assert capitalized_consonant('codeup') == 'Codeup'
+
+print("Exercise is correct.")
 # 5. Define a function named calculate_tip. It should accept a tip percentage (a number between 0 and 1) and the bill total, and return the amount to tip.
 
 # 6. Define a function named apply_discount. It should accept a original price, and a discount percentage, and return the price after the discount is applied.
