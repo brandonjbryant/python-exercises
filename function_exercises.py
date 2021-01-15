@@ -38,6 +38,14 @@ assert calculate_tip(.25,20)
 print("Exercise is correct")
 
 # 6. Define a function named apply_discount. It should accept a original price, and a discount percentage, and return the price after the discount is applied.
+def apply_discount(original_price,discount):
+    discounted_price = original_price * discount
+    return original_price - discounted_price
+
+assert apply_discount(15,.5)
+assert apply_discount(52,.16)
+
+print("Exercise is correct")
 
 # 7. Define a function named handle_commas. It should accept a string that is a number that contains commas in it as input, and return a number as output.
 
