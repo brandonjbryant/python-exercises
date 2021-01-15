@@ -6,7 +6,7 @@ rental_days= (little_mermaid_rental + brother_bear_rental + hercules_rental)
 total_price = rental_days * price_per_day
 print("The total price for the movie rentals is " + str(total_price) + " dollars. ")
 
-rental_total = (3 + 5 +1 )
+rental_total = (3 + 5 + 1)
 daily_price = 3 
 total_cost = rental_total * daily_price
 print("The total cost for the movie rentals is " + str(total_cost) + " dollars. ")
