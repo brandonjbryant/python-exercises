@@ -48,7 +48,17 @@ assert apply_discount(52,.16)
 print("Exercise is correct")
 
 # 7. Define a function named handle_commas. It should accept a string that is a number that contains commas in it as input, and return a number as output.
+def handle_commas(numeric_string):
+    number_without_commas = numeric_string.replace(',', '')
+    real_number = int(number_without_commas)
+    return real_number
 
+assert handle_commas('1,234') == 1234
+assert handle_commas('1,234,567') == 1234567
+assert handle_commas('123') == 123
+
+
+print("Exercise is correct")
 # 8. Define a function named get_letter_grade. It should accept a number and return the letter grade associated with that number (A-F).
 
 
