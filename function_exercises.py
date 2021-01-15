@@ -117,3 +117,17 @@ print("Exercise is correct")
 #Write a function named cumulative_sum that accepts a list of numbers and returns a list that is the cumulative sum of the numbers in the list.
  #cumulative_sum([1, 1, 1]) returns [1, 2, 3]
     #cumulative_sum([1, 2, 3, 4]) returns [1, 3, 6, 10]
+
+def cumulative_sum(numbers):
+    total = 0
+    cumulative_sums = []
+    for n in numbers:
+        total += n
+        cumulative_sums.append(total)
+    return cumulative_sums
+
+
+
+assert cumulative_sum([1, 1, 1]) == [1, 2, 3]
+assert cumulative_sum([1, 2,3,4]) == [1, 3, 6,10]
+print("Exercise is correct")
