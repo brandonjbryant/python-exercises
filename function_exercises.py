@@ -3,7 +3,6 @@ def is_two(x):
     return  x == '2' or x == 2
 
 
-
 # 2. Define a function named is_vowel. It should return True if the passed string is a vowel, False otherwise.
 def is_vowel(letter):
     return letter == 'a' or letter == 'e' or letter == 'i' or letter == 'o' or letter == 'u'
