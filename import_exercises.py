@@ -45,3 +45,10 @@ total_users
 # 2. Number of active users
 active_users = len([user for user in list_of_profiles if user["isActive"]])
 active_users
+
+
+# 3. Number of inactive users
+inactive_users = len([user for user in list_of_profiles if not user["isActive"]])
+inactive_users
+
+assert total_users == active_users + inactive_users
