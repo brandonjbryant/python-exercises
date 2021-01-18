@@ -28,27 +28,109 @@ number_of_combinations = len(list(combinations("abcd", 2)))
 print(f"{number_of_combinations} combinations")
 
 # ### Use the load function from the json module to open this file, it will produce a list of dictionaries. Using this data, write some code that calculates and outputs the following information:
+
 import json
+ 
 
-profiles = open("profiles.json")
-list_of_profiles = json.load(profiles)
-list_of_profiles
+with open('profiles.json') as f:
+    data = json.load(f)
 
-list_of_profiles[0]
-len(list_of_profiles)
+
+data[8]
 
 # 1. Total number of users
-total_users = len(list_of_profiles)
-total_users
+#19 Users
+len(data)
 
 
 # 2. Number of active users
-active_users = len([user for user in list_of_profiles if user["isActive"]])
-active_users
-
+#9 Active
+active_users = []
+for user in range(len(data)):    
+    if data[user]['isActive'] == True:
+        active_users.append(data[user]['name'])
+        
+print(active_users)
+len(active_users)
 
 # 3. Number of inactive users
-inactive_users = len([user for user in list_of_profiles if not user["isActive"]])
-inactive_users
+#10 inactive
+inactive_users = []
+for user in range(len(data)):    
+    if data[user]['isActive'] == False:
+        inactive_users.append(data[user]['name'])
+        
+print(inactive_users)
+len(inactive_users)
 
-assert total_users == active_users + inactive_users
+# 4. Grand total of balances for all users
+#52667.02
+grand_total = []
+for user in range(len(data)):    
+    grand_total.append(data[user]['balance'])
+    
+
+def string_to_float(x):
+    return float(x.replace(',','').replace('$',''))
+
+grand_total = [string_to_float(balance) for balance in grand_total]
+
+sum(grand_total)
+
+
+# 5. Average balance per user
+#2771.95
+average_balance = round(sum(grand_total)/len(data),2)
+average_balance
+
+
+
+# 6. User with the lowest balance
+#$1,214.10 Avery Flynn
+print(min(grand_total))
+
+[user['balance'] +' '+ user['name'] for user in data if user['balance'] == '$1,214.10']
+
+
+
+# 7. User with the highest balance
+#$3,919.64 Fay Hammond
+
+print(max(grand_total))
+
+[user['balance'] +' '+ user['name'] for user in data if user['balance'] == '$3,919.64']
+
+
+# 8. Most common favorite fruit
+#Most common favorite fruit
+#Strawberry
+fav_fruit = [user['favoriteFruit'] for user in data]
+fav_fruit
+
+import statistics
+statistics.mode(fav_fruit)
+
+
+
+# 9. Least most common favorite fruit
+#Least most common favorite fruit
+#Apples with 4
+print(sorted(fav_fruit))
+print()
+
+print('There are', fav_fruit.count('apple'), 'users with favorite Apples')
+print('There are', fav_fruit.count('banana'), 'users with favorite Banana')
+print('There are', fav_fruit.count('strawberry'), 'users with favorite Strawberry')
+
+
+# 10. Total number of unread messages for all users
+greeting = [user['greeting'] for user in data]
+
+
+def extract_num(string):
+    for char in string:
+        if char.isdigit():
+            return int(char)
+        
+message_quantity_list = [extract_num(message) for message in greeting]
+print(f'Total number of unread messages: {sum(message_quantity_list)}')
