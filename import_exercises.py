@@ -40,3 +40,8 @@ len(list_of_profiles)
 # 1. Total number of users
 total_users = len(list_of_profiles)
 total_users
+
+
+# 2. Number of active users
+active_users = len([user for user in list_of_profiles if user["isActive"]])
+active_users
