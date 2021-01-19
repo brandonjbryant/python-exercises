@@ -34,14 +34,15 @@ import json
 
 with open('profiles.json') as f:
     data = json.load(f)
-
+# ### import json
+# profiles = json.load (open(profiles.json))
 
 data[8]
 
 # 1. Total number of users
 #19 Users
 len(data)
-
+#len(profiles)
 
 # 2. Number of active users
 #9 Active
@@ -53,6 +54,14 @@ for user in range(len(data)):
 print(active_users)
 len(active_users)
 
+#if profiles[0]['isActive']
+#   print[(1)
+#else 
+#    print(0)
+###Another route:
+# len([profile for profile in profiles if profile['isActive'])
+
+
 # 3. Number of inactive users
 #10 inactive
 inactive_users = []
@@ -62,6 +71,8 @@ for user in range(len(data)):
         
 print(inactive_users)
 len(inactive_users)
+
+#len([profile for profile in profiles if not profile['isActive'])
 
 # 4. Grand total of balances for all users
 #52667.02
@@ -77,13 +88,24 @@ grand_total = [string_to_float(balance) for balance in grand_total]
 
 sum(grand_total)
 
+#def clean_balance(balance):
+#   balance = balance.replace(',' ,'')
+#   balance = balance.replace('$' ,'')
+#   return float (balance)
+
+###extracting the balance values
+
+####remove the 
+
+
+#balance = profiles
 
 # 5. Average balance per user
 #2771.95
 average_balance = round(sum(grand_total)/len(data),2)
 average_balance
 
-
+#sum(balances)/len(balances)
 
 # 6. User with the lowest balance
 #$1,214.10 Avery Flynn
@@ -91,7 +113,7 @@ print(min(grand_total))
 
 [user['balance'] +' '+ user['name'] for user in data if user['balance'] == '$1,214.10']
 
-
+#user-WITH_LOWEST_BA
 
 # 7. User with the highest balance
 #$3,919.64 Fay Hammond
